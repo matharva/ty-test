@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Details from "./components/Details/Details";
+import Cta from "./components/Cta/Cta";
+import Bike from "./components/Bike/Bike";
+import { useState } from "react";
 
 function App() {
+  const [changePage, setChangePage] = useState(false);
+  const value = {
+    changePage,
+    setChangePage,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Navbar />
+      <div className={`App ${changePage ? "shift" : ""}`}>
+        <div className="hero-grid">
+          {changePage ? null : <Details />}
+          <Cta />
+          <Bike value={value} />
+        </div>
+      </div>
     </div>
   );
 }

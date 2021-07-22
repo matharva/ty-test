@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 3rem 9rem;
+  position: absolute;
+  z-index: 1;
+}
+.navbar__links {
+  display: flex;
+}
+.navbar__item {
+  color: white;
+  padding: 1rem;
+}

@@ -1,0 +1,21 @@
+.details {
+  display: flex;
+  justify-content: space-evenly;
+  /* width: 720px; */
+  grid-area: details;
+  /* border: 2px solid red; */
+  align-items: center;
+}
+.details__item {
+  display: flex;
+  margin: 0 2rem;
+}
+.details__text {
+  color: white;
+  margin-left: 1rem;
+}
+.details__text__header {
+  color: gray;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
