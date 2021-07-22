@@ -8,5 +8,24 @@
   right: 120px;
   top: 220px;
   cursor: pointer;
-  transition: all 1000ms ease-in-out;
+  background-color: transparent;
+  padding: 1rem;
+  color: white;
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+.rotate-45 {
+  transform: rotate(-45deg);
+}
+.arrowbtntext {
+  color: aqua;
+  font-size: 0.75rem;
+  /* display: none; */
+  opacity: 0;
+}
+.back__button:hover .arrowbtntext {
+  /* display: block; */
+  opacity: 1;
+  transition: all 500ms ease;
 }

@@ -1,23 +1,87 @@
 .hovermarker {
   position: absolute;
-  padding: 1.5rem;
+  padding: 2rem;
   cursor: pointer;
-}
-.hovermarker-style {
-  background-color: rgba(128, 128, 128, 0.2);
+  background-color: rgba(10, 10, 10, 0.5);
   border-radius: 50px;
+  display: flex;
+  transition: all 300ms ease-in-out;
 }
+
 .hovermarker__svg {
-  height: 50px;
-  width: 50px;
-  background-color: red;
-  position: absolute;
-  /* top: 10px; */
+  height: 30px;
+  width: 30px;
+  background-color: rgba(0, 255, 255, 0.5);
+  transform: rotate(45deg);
+  margin-top: 5px;
+  /* opacity: 0.3; */
+  transition: all 300ms ease-in-out;
+}
+
+.hovermarker:hover .hovermarker__svg {
+  transform: rotate(45deg) scale(0.5);
+  background-color: aqua;
+  opacity: 1;
 }
 .hovermarker__text {
-  margin-left: 4rem;
+  margin-left: 3rem;
   color: white;
 }
 .disp-none {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+}
+.hovermarker__title {
+  font-size: 0.7rem;
+  color: gray;
+}
+.hovermarker__subtitle {
+  font-size: 0.9rem;
+}
+.rotate-0 {
+  left: -10px;
+  top: -10px;
+  opacity: 1;
+}
+.rotate-90 {
+  transform: rotate(90deg);
+  left: 30px;
+  top: -10px;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+  left: 30px;
+  top: 30px;
+}
+.rotate-270 {
+  transform: rotate(270deg);
+  left: -10px;
+  top: 30px;
+}
+.hovermarker:hover .rotate-0 {
+  left: -13px;
+  top: -13px;
+}
+.hovermarker:hover .rotate-90 {
+  left: 33px;
+  top: -13px;
+}
+.hovermarker:hover .rotate-180 {
+  left: 33px;
+  top: 33px;
+}
+.hovermarker:hover .rotate-270 {
+  left: -13px;
+  top: 33px;
+}
+.arrow__svg {
+  opacity: 1;
+  /* padding: 1rem; */
+  position: absolute;
+  transition: all 300ms ease-in-out;
+}
+.arrow__svg__container {
+  transform: rotate(45deg);
+  transform-origin: 10px;
+  transition: all 300ms ease-in-out;
 }

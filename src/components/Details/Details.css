@@ -5,6 +5,7 @@
   grid-area: details;
   /* border: 2px solid red; */
   align-items: center;
+  margin-top: 200px;
 }
 .details__item {
   display: flex;

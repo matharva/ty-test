@@ -1,6 +1,8 @@
 .App {
   background-image: url("./assets/bikeweb_03-Current-View.png");
   min-height: 115vh;
+  transition: all 1000ms ease-in-out;
+  z-index: 3;
 }
 .hero-grid {
   display: grid;
@@ -15,9 +17,84 @@
   background: black;
   overflow-x: hidden;
   position: relative;
+  overflow-y: hidden;
 }
 
 .shift {
   transform: translateX(-62.5%);
-  transition: all 1000ms ease-in-out;
+}
+.two-page {
+  display: flex;
+}
+.disp-none {
+  display: none;
+}
+
+.cover-text {
+  color: white;
+  z-index: 1;
+  position: absolute;
+  margin-left: 715px;
+  /* transition: all 1000ms ease-in-out; */
+  margin-top: 170px;
+  /* border: 2px solid orange; */
+  height: 80vh;
+  padding: 3rem 2rem;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.cover-text__split {
+  display: flex;
+  gap: 2rem;
+  max-width: 800px;
+  margin-top: 1rem;
+  color: gray;
+  font-size: 1rem;
+}
+.cover-text__title {
+  font-size: 3.3rem;
+}
+.cover-text__subtitle {
+  font-size: 6rem;
+  color: aqua;
+}
+.img_container {
+  /* max-height: 30vh; */
+  /* width: 900px; */
+  position: relative;
+}
+.img_container > img {
+  width: 98%;
+  /* padding: 1rem; */
+  margin-top: 2rem;
+}
+.img_container__content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  top: 350px;
+  left: 40px;
+}
+.img_container__symbol {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+.img_container__text {
+  margin-left: 2rem;
+  max-width: 300px;
+}
+.new-section {
+  height: 100vh;
+  /* border: 2px solid red; */
+  scroll-snap-align: start;
+}
+.old-section {
+  scroll-snap-align: start;
 }
