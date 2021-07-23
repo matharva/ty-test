@@ -1,15 +1,28 @@
 import React, { useEffect, useRef } from "react";
 import "./Cta.css";
 import CtaButton from "../CtaButton/CtaButton";
+import Rect from "../../assets/Rectangle 3.svg";
+// import DrawSVGPlugin from "gsap/DrawSVGPlugin";
 import { gsap } from "gsap";
 const Cta = ({ changePage }) => {
   let ctaTitle = useRef(null);
   let ctaSubTitle = useRef(null);
   let ctaText = useRef(null);
   let ctaButton = useRef(null);
+  let svgRef = useRef();
+
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     svgRef.current,
+  //     { drawSVG: "10% 40%" },
+  //     { drawSVG: "100%", duration: 2 }
+  //   );
+  // }, []);
+
   useEffect(() => {
     playRerverseAnimation();
   }, []);
+
   useEffect(() => {
     if (changePage) {
       playAnimation();
@@ -100,9 +113,27 @@ const Cta = ({ changePage }) => {
           quod voluptates.
         </div>
         {/* <CtaButton ref={(el) => (ctaButton = el)} /> */}
-        <button className="cta__btn" ref={(el) => (ctaButton = el)}>
-          BUY ONE
-        </button>
+        <div className="ctaButton" ref={(el) => (ctaButton = el)}>
+          <svg
+            width="176"
+            height="64"
+            viewBox="0 0 176 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            ref={svgRef}
+          >
+            <rect
+              className="animateBtn"
+              x="1"
+              y="1"
+              width="174"
+              height="62"
+              rx="31"
+              stroke="#00FFFF"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   );

@@ -39,3 +39,60 @@
   margin: 1rem 0;
   line-height: 1.75;
 }
+
+/* .cta__btn {
+  display: block;
+  max-width: 11rem;
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  border: 2px solid #00ffff;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+} */
+.ctaButton {
+  position: relative;
+}
+.animateBtn {
+  animation: anim-rev 500ms ease-in-out forwards;
+}
+.ctaButton::before {
+  content: "Buy One";
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.ctaButton:hover .animateBtn {
+  stroke-dasharray: 419;
+  stroke-dashoffset: 419;
+  animation: anim 500ms ease-in-out forwards;
+}
+@keyframes anim {
+  0% {
+    stroke-dashoffset: 419;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes anim-rev {
+  100% {
+    stroke-dashoffset: 0;
+  }
+  0% {
+    stroke-dashoffset: 419;
+  }
+}
+.animateBtn {
+  stroke-dasharray: 104;
+  stroke-dashoffset: 0%;
+}

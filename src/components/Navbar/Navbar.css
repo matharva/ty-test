@@ -19,11 +19,58 @@
   transform: translateX(-10px);
 }
 .navbar__item {
-  color: white;
   padding: 1rem;
   color: gray;
   text-transform: uppercase;
+  cursor: pointer;
   font-size: 0.8rem;
+  animation: slide-up-reverse 300ms ease;
+}
+.navbar__item:hover {
+  animation: slide-up 300ms ease both;
+}
+@keyframes slide-up {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(-5px);
+  }
+  45% {
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(1px);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    color: aqua;
+  }
+}
+@keyframes slide-up-reverse {
+  100% {
+    opacity: 1;
+    color: aqua;
+  }
+  90% {
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(1px);
+  }
+  45% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-5px);
+    /* opacity: 0; */
+  }
+  0% {
+    opacity: 1;
+  }
 }
 
 .navbar__logo__container {

@@ -20,25 +20,35 @@
 .arrowbtntext {
   color: aqua;
   font-size: 0.75rem;
+  margin-left: 0.5rem;
   /* display: none; */
   opacity: 0;
 }
 .back__button:hover .arrowbtntext {
-  /* display: block; */
+  display: block;
   opacity: 1;
   transition: all 500ms ease;
 }
 
 .arrow45deg {
-  margin-right: 1rem;
-  /* border: 2px sienna solid; */
+  padding: 15px;
 }
-.arrow45deg path {
-  stroke: white !important;
+.back__button:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  border-radius: 50%;
+  border: 2px solid aqua;
+  padding: 13px;
+  /* margin-right: 1rem; */
+  transition: all 1000ms ease;
 }
 
 .cta__left__btn {
   position: absolute;
   right: 500px;
   bottom: -190px;
+  color: white;
+  /* background-color: transparent; */
 }
