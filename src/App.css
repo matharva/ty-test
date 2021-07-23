@@ -90,7 +90,30 @@
   height: 70px;
   width: 70px;
   border-radius: 50%;
+  border: 2px solid aqua;
+  transition: all 700ms ease;
+  position: relative;
+}
+.img_container__symbol:hover {
   background-color: aqua;
+}
+.img_container__symbol::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid white;
+}
+.img_container__symbol:hover::before {
+  border-left: 12px solid black;
+  transition: border-left 700ms ease-in-out;
+  /* border-left: #000; */
+  /* background-color: pink; */
 }
 .img_container__text {
   margin-left: 2.3rem;
