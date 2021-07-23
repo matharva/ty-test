@@ -17,30 +17,40 @@ const Bike = ({ value }) => {
       subtitle: "SRAM CODE R",
       top: "155px",
       left: "693px",
+      markerX: 700,
+      markerY: 100,
     },
     {
       title: "Light Seat",
       subtitle: "Crygolite Hotrod 50",
       top: "305px",
       left: "363px",
+      markerX: 900,
+      markerY: 50,
     },
     {
       title: "Motor",
       subtitle: "Yahama PW-X2",
       top: "630px",
       left: "240px",
+      markerX: 1000,
+      markerY: -200,
     },
     {
       title: "Battery",
       subtitle: "Juiced 52V Battery Pack",
       top: "520px",
       left: "538px",
+      markerX: 500,
+      markerY: -100,
     },
     {
       title: "Wheels",
       subtitle: "DT Swiss Mission HYBRID",
       top: "420px",
       left: "868px",
+      markerX: 250,
+      markerY: -50,
     },
   ];
   useEffect(() => {
@@ -104,10 +114,10 @@ const Bike = ({ value }) => {
         </>
       ) : null}
 
-      {!value.changePage &&
-        items.map((item) => {
-          return <HoverMarker props={item} value={value} />;
-        })}
+      {/* {!value.changePage && */}
+      {items.map((item) => {
+        return <HoverMarker props={item} value={value} />;
+      })}
     </div>
   );
 };

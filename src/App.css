@@ -1,7 +1,7 @@
 .App {
   background-image: url("./assets/bikeweb_03-Current-View.png");
   min-height: 115vh;
-  transition: all 1000ms ease-in-out;
+  transition: all 900ms ease-in-out;
   z-index: 3;
   box-shadow: inset 0 0 100px 50px #000;
 }

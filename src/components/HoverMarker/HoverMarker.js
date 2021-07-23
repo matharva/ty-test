@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./HoverMarker.css";
 import ArrowSVG from "../../assets/Path 25.svg";
+import { gsap } from "gsap";
 const HoverMarker = ({ props, value }) => {
   // console.log(props, value);
   const styleObject = {
@@ -13,6 +14,32 @@ const HoverMarker = ({ props, value }) => {
     value.setChangePage(true);
   }
   const [isVisible, setIsVisible] = useState(false);
+  let markerRef = useRef();
+  useEffect(() => {
+    if (value.changePage) {
+      playAnimation();
+    } else replayAnimation();
+    console.log("In useEffect", value.changePage);
+  }, [value.changePage]);
+
+  // useEffect(() => {
+  //   playReverseAnimation();
+  // }, []);
+
+  function playAnimation() {
+    gsap.to(markerRef, 0.8, {
+      opacity: 0,
+      x: props.markerX,
+      y: props.markerY,
+      ease: "power3.inOut",
+    });
+  }
+  // function playReverseAnimation() {
+  //   gsap.from(markerRef, 0.4, { opacity: 1, x: 0, ease: "power3.inOut" });
+  // }
+  function replayAnimation() {
+    gsap.to(markerRef, 0.8, { opacity: 1, x: 0, y: 0, ease: "power3.inOut" });
+  }
   return (
     <>
       <div
@@ -22,6 +49,7 @@ const HoverMarker = ({ props, value }) => {
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}
         onClick={handleClick}
+        ref={(el) => (markerRef = el)}
       >
         {/* <div className="arrow__svg"></div> */}
         <div className="arrow__svg__container">
