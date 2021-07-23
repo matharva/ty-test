@@ -1,6 +1,6 @@
 import React from "react";
 import "./BikeInfo.css";
-import BikeImage from "../../assets/img_bike.png";
+import BikeImage from "../../assets/img_bike1.png";
 const BikeInfo = () => {
   const features = [
     "4-Piston Caliper",
@@ -13,8 +13,7 @@ const BikeInfo = () => {
         <div className="bikeinfo__content__title">Rear brakes</div>
         <div className="bikeinfo__content__desc">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat,
-          voluptatibus? Perspiciatis molestias, aut expedita veniam laborum
-          delectus et esse laudantium ipsa, nam tempora!
+          voluptatibus? Perspiciatis molestias, ipsa, nam tempora!
         </div>
       </div>
       <div className="bikeinfo__img__container">

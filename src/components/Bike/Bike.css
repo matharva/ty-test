@@ -1,12 +1,11 @@
 .bike {
   grid-area: bike;
-  /* border: 2px solid orange; */
   position: relative;
 }
 .back__button {
   position: absolute;
-  right: 120px;
-  top: 220px;
+  right: 100px;
+  top: 210px;
   cursor: pointer;
   background-color: transparent;
   padding: 1rem;
@@ -28,4 +27,18 @@
   /* display: block; */
   opacity: 1;
   transition: all 500ms ease;
+}
+
+.arrow45deg {
+  margin-right: 1rem;
+  /* border: 2px sienna solid; */
+}
+.arrow45deg path {
+  stroke: white !important;
+}
+
+.cta__left__btn {
+  position: absolute;
+  right: 500px;
+  bottom: -190px;
 }

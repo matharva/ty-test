@@ -1,10 +1,10 @@
 .cta__wrapper {
   grid-area: cta;
-  /* border: 2px solid yellowgreen; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 370px;
+  margin-top: 375px;
+  transform: translateX(-1.5rem);
 }
 .cta {
   color: white;
@@ -34,7 +34,8 @@
   padding: 0;
 }
 .cta__desc {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: gray;
   margin: 1rem 0;
+  line-height: 1.75;
 }

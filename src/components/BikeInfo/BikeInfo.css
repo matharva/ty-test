@@ -1,6 +1,6 @@
 .bikeinfo__parent {
   display: grid;
-  grid-template-columns: 1fr 2.25fr;
+  grid-template-columns: 1fr 1.75fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "title img" "footer-text img";
   /* border: 2px solid red; */
@@ -9,7 +9,8 @@
 .bikeinfo__content {
   grid-area: title;
   /* border: 2px solid orange; */
-  padding: 2.5rem 0rem;
+  padding-top: 0.35rem;
+  margin-left: 1rem;
   /* flex: 0.5; */
 }
 .bikeinfo__content__title {
@@ -17,16 +18,26 @@
 }
 .bikeinfo__content__desc {
   color: gray;
-  font-size: 1.25rem;
-  margin-top: 2rem;
+  font-size: 1.45rem;
+  margin-top: 2.5rem;
 }
 .bikeinfo__img__container {
   /* flex: 0.5; */
   grid-area: img;
+  position: relative;
+  margin-top: 1rem;
   /* border: 2px solid yellowgreen; */
 }
 .bikeinfo__img__container > img {
-  width: 100%;
+  width: 90%;
+}
+.bikeinfo__img__container::after {
+  content: "R";
+  position: absolute;
+  color: aqua;
+  font-size: 12rem;
+  top: -15px;
+  left: 340px;
 }
 .bikeinfo__info {
   grid-area: footer-text;
@@ -37,6 +48,7 @@
   list-style: none;
   padding: 2.5rem 0rem;
   margin-top: 2rem;
+  transform: translateX(-1.5rem);
   /* color: aqua; */
 }
 .bikeinfo__info li::before {
@@ -46,9 +58,14 @@
 }
 .bikeinfo__info__header {
   margin-bottom: 1rem;
-  font-size: 1.75rem;
+  /* margin-left: 1rem; */
+  font-size: 1.5rem;
 }
 .bikeinfo__info__points {
   color: gray;
   font-size: 0.9rem;
+  /* margin-left: 1rem; */
+}
+.bikeinfo__info__points li {
+  margin-top: 7px;
 }
