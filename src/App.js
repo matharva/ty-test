@@ -20,7 +20,7 @@ function App() {
         <div className={`App ${changePage ? "shift" : ""}`}>
           <div className="hero-grid">
             {changePage ? null : <Details />}
-            <Cta />
+            <Cta changePage={changePage} />
             <Bike value={value} />
           </div>
         </div>

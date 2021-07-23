@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./HoverMarker.css";
 import ArrowSVG from "../../assets/Path 25.svg";
 const HoverMarker = ({ props, value }) => {
-  console.log(props, value);
+  // console.log(props, value);
   const styleObject = {
     top: props.top,
     right: props.right,
