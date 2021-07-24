@@ -34,13 +34,25 @@
 .bikeinfo__img__container > img {
   width: 90%;
 }
-.bikeinfo__img__container::before {
+/* .bikeinfo__img__container::before {
   content: "R";
   position: absolute;
   color: aqua;
   font-size: 12rem;
   top: -15px;
   left: 340px;
+  transition: all 700ms ease;
+} */
+.bike__info__text {
+  position: absolute;
+  color: aqua;
+  font-size: 12rem;
+  top: -15px;
+  left: 340px;
+  transition: all 700ms ease;
+}
+.bike__info__text:hover {
+  transform: rotateY(180deg);
 }
 .bikeinfo__info {
   grid-area: footer-text;

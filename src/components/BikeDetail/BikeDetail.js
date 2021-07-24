@@ -52,13 +52,8 @@ const BikeDetail = ({ changePage, scrollDown, upRef }) => {
   return (
     <div>
       <div className="" ref={el}></div>
-      {/* <div className="" ref={upRef}></div> */}
       <div className="cover-text__header">
-        <div
-          className="cover-text__title"
-          ref={(el) => (detailTitle = el)}
-          // onClick={() => scrollHere()}
-        >
+        <div className="cover-text__title" ref={(el) => (detailTitle = el)}>
           The best Brakes <br /> in the world
         </div>
         <div

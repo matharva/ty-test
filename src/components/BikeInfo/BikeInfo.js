@@ -7,12 +7,13 @@ const BikeInfo = () => {
   let infoDesc = useRef();
   let infoImg = useRef();
   let infoPoints = useRef();
+  let infoImgText = useRef();
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     const coverText = document.querySelector(".cover-text");
     coverText.addEventListener("scroll", () => {
       // console.log(coverText.scrollTop);
-      if (coverText.scrollTop > 200) setScroll(true);
+      if (coverText.scrollTop > 100) setScroll(true);
       else setScroll(false);
     });
   }, []);
@@ -34,12 +35,20 @@ const BikeInfo = () => {
       ease: "power3.inOut",
       delay: 0.2,
     });
-    // gsap.from(infoImg, 0.8, {
-    //   opacity: 0,
-    //   x: -100,
-    //   ease: "power3.inOut",
-    //   delay: 0.4,
-    // });
+    gsap.from(infoImg, 0.8, {
+      opacity: 0,
+      // rotateY: 180,
+      scale: 1,
+      ease: "power3.inOut",
+      delay: 0.4,
+    });
+    gsap.from(infoImgText, 0.4, {
+      opacity: 0,
+      rotateY: 180,
+      // scale: 1,
+      ease: "power3.inOut",
+      delay: 0.4,
+    });
     gsap.from(infoPoints, 0.8, {
       opacity: 0,
       x: -100,
@@ -65,6 +74,9 @@ const BikeInfo = () => {
         </div>
       </div>
       <div className="bikeinfo__img__container" ref={(el) => (infoImg = el)}>
+        <div className="bike__info__text" ref={(el) => (infoImgText = el)}>
+          R
+        </div>
         <img src={BikeImage} alt="" />
       </div>
       <div className="bikeinfo__info" ref={(el) => (infoPoints = el)}>
