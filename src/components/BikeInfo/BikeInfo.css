@@ -9,6 +9,7 @@
 .bikeinfo__content {
   grid-area: title;
   /* border: 2px solid orange; */
+  cursor: pointer;
   padding-top: 0.35rem;
   margin-left: 1rem;
   /* flex: 0.5; */
@@ -51,9 +52,7 @@
   left: 340px;
   transition: all 700ms ease;
 }
-.bike__info__text:hover {
-  transform: rotateY(180deg);
-}
+
 .bikeinfo__info {
   grid-area: footer-text;
   display: grid;

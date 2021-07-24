@@ -46,6 +46,7 @@
   height: 80vh;
   padding: 3rem 2rem;
   overflow-y: scroll;
+  /* overflow-y: visible; */
   scroll-snap-type: y mandatory;
 }
 ::-webkit-scrollbar {

@@ -12,20 +12,22 @@ const BikeInfo = () => {
   useEffect(() => {
     const coverText = document.querySelector(".cover-text");
     coverText.addEventListener("scroll", () => {
-      // console.log(coverText.scrollTop);
-      if (coverText.scrollTop > 100) setScroll(true);
+      console.log(scroll);
+      if (coverText.scrollTop > 600) setScroll(true);
       else setScroll(false);
+      // console.log(coverText.scrollTop);
+      // if (coverText.scrollTop > 900) playAnimation();
     });
-  }, []);
+  });
+  useEffect(() => {
+    playAnimation();
+  }, [scroll]);
   const features = [
     "4-Piston Caliper",
     "All-new Code design based on Guide Architecture",
     "Designed specifically to handle heavy-duty demands",
   ];
   const sectionRef = useRef();
-  useEffect(() => {
-    playAnimation();
-  }, [scroll]);
 
   function playAnimation() {
     gsap.from(infoTitle, 0.8, { opacity: 0, x: -200, ease: "power3.inOut" });
