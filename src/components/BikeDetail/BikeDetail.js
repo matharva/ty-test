@@ -3,23 +3,29 @@ import "./BikeDetail.css";
 // import BikeImage from "../../assets/bikeweb_05-Current-View.png";
 import BikeImage from "../../assets/bikeweb_05-Current-View.png";
 import { gsap } from "gsap";
-const BikeDetail = ({ changePage }) => {
+const BikeDetail = ({ changePage, scrollDown, upRef }) => {
+  console.log(scrollDown);
   let detailTitle = useRef();
   let detailSubtitle = useRef();
   let detailText = useRef();
   let detailImg = useRef();
-  const el = useRef(null);
 
   useEffect(() => {
     if (changePage) playAnimation();
     else {
+      // scrollDown();
       scrollHere();
     }
   }, [changePage]);
 
+  const el = useRef(null);
   function scrollHere() {
     el.current.scrollIntoView({ block: "end", behavior: "smooth" });
   }
+  // const el = useRef(null);
+  // function scrollHere() {
+  //   el.current.scrollIntoView({ block: "end", behavior: "smooth" });
+  // }
 
   function playAnimation() {
     gsap.from(detailTitle, 0.8, { opacity: 0, x: -200, ease: "power3.inOut" });
@@ -42,11 +48,17 @@ const BikeDetail = ({ changePage }) => {
       delay: 0.6,
     });
   }
+
   return (
     <div>
       <div className="" ref={el}></div>
+      {/* <div className="" ref={upRef}></div> */}
       <div className="cover-text__header">
-        <div className="cover-text__title" ref={(el) => (detailTitle = el)}>
+        <div
+          className="cover-text__title"
+          ref={(el) => (detailTitle = el)}
+          // onClick={() => scrollHere()}
+        >
           The best Brakes <br /> in the world
         </div>
         <div

@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import "./BikeInfo.css";
 import BikeImage from "../../assets/img_bike1.png";
 import { gsap } from "gsap";
-import { useIntersection } from "react-use";
 const BikeInfo = () => {
   let infoTitle = useRef();
   let infoDesc = useRef();
@@ -13,7 +12,7 @@ const BikeInfo = () => {
     const coverText = document.querySelector(".cover-text");
     coverText.addEventListener("scroll", () => {
       // console.log(coverText.scrollTop);
-      if (coverText.scrollTop > 600) setScroll(true);
+      if (coverText.scrollTop > 200) setScroll(true);
       else setScroll(false);
     });
   }, []);
@@ -51,6 +50,7 @@ const BikeInfo = () => {
 
   return (
     <div className="bikeinfo__parent" ref={sectionRef}>
+      <div className=""></div>
       <div className="bikeinfo__content">
         <div
           className="bikeinfo__content__title"
