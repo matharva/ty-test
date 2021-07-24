@@ -60,7 +60,8 @@ const BikeInfo = () => {
         </div>
         <div className="bikeinfo__content__desc" ref={(el) => (infoDesc = el)}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat,
-          voluptatibus? Perspiciatis molestias, ipsa, nam tempora!
+          voluptatibus? Perspiciatis molestias Perspiciatis molestias, ipsa, nam
+          tempora ipsa, nam tempora!
         </div>
       </div>
       <div className="bikeinfo__img__container" ref={(el) => (infoImg = el)}>

@@ -8,10 +8,18 @@ const BikeDetail = ({ changePage }) => {
   let detailSubtitle = useRef();
   let detailText = useRef();
   let detailImg = useRef();
+  const el = useRef(null);
 
   useEffect(() => {
     if (changePage) playAnimation();
+    else {
+      scrollHere();
+    }
   }, [changePage]);
+
+  function scrollHere() {
+    el.current.scrollIntoView({ block: "end", behavior: "smooth" });
+  }
 
   function playAnimation() {
     gsap.from(detailTitle, 0.8, { opacity: 0, x: -200, ease: "power3.inOut" });
@@ -36,6 +44,7 @@ const BikeDetail = ({ changePage }) => {
   }
   return (
     <div>
+      <div className="" ref={el}></div>
       <div className="cover-text__header">
         <div className="cover-text__title" ref={(el) => (detailTitle = el)}>
           The best Brakes <br /> in the world

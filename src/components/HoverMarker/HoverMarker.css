@@ -2,7 +2,7 @@
   position: absolute;
   padding: 3rem;
   cursor: pointer;
-  background-color: #0208085c;
+  background-color: rgba(2, 8, 8, 0.361);
   border-radius: 50%;
   display: flex;
   /* transition: all 300ms ease-in-out; */
@@ -25,6 +25,8 @@
 }
 .hovermarker:hover {
   border-radius: 80px;
+  /* opacity: 1; */
+  background-color: rgba(2, 8, 8, 0.7);
 }
 .hovermarker__text {
   margin-left: 3rem;

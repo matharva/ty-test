@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 .App {
   background-image: url("./assets/bikeweb_03-Current-View.png");
   min-height: 115vh;
@@ -52,6 +53,7 @@
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 .cover-text__split {
+  font-family: "Rajdhani", sans-serif;
   display: flex;
   gap: 2rem;
   max-width: 800px;
@@ -59,11 +61,13 @@
   color: gray;
   font-size: 1rem;
   line-height: 1.4;
+  cursor: pointer;
 }
 .cover-text__title {
   font-size: 3.5rem;
 }
 .cover-text__subtitle {
+  cursor: pointer;
   font-size: 6rem;
   color: aqua;
   line-height: 1.1;
